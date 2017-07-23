@@ -1,4 +1,4 @@
-# random2
+# [random2](https://www.npmjs.com/package/random2)
 Seeded pseudorandom number generator object implementation for NodeJS.
 
 ## Usage

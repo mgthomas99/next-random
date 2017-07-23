@@ -1,0 +1,37 @@
+{
+  "name": "random2",
+  "version": "1.0.0",
+  "description": "A seedable pseudorandom number generator object.",
+  "main": "dist/commonjs/index.js",
+  "typings": "dist/commonjs/index.d.ts",
+  "author": "George Thomas",
+  "license": "MIT",
+  "scripts": {
+    "build:commonjs": "tsc --module commonjs --outDir \"./dist/commonjs/\"",
+    "build:es2015": "tsc --module es2015 --outDir \"./dist/es2015/\"",
+    "build": "concurrent \"npm run build:commonjs\" \"npm run build:es2015\"",
+    "test": "nyc node_modules/mocha/bin/_mocha --require source-map-support/register --compilers ts:ts-node/register test/*.ts"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.0.1",
+    "@types/mocha": "^2.2.41",
+    "@types/node": "^8.0.2",
+    "chai": "^4.0.2",
+    "concurrent": "^0.3.2",
+    "mocha": "^3.4.2",
+    "nyc": "^11.0.2",
+    "ts-node": "^3.1.0",
+    "typescript": "^2.3.4"
+  },
+  "nyc": {
+    "include": [
+      "src/**/*.ts"
+    ],
+    "extension": [
+      ".ts"
+    ],
+    "require": [
+      "ts-node/register"
+    ]
+  }
+}

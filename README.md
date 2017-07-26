@@ -1,11 +1,11 @@
 [circleci-url]: https://circleci.com/gh/mgthomas99/random2
-[circleci-shield-url]: https://img.shields.io/circleci/project/github/mgthomas99/random2.svg
+[circleci-shield-url]: https://img.shields.io/circleci/project/github/mgthomas99/random2.svg?style=flat-square
 [codecov-url]: https://codecov.io/gh/mgthomas99/random2
-[codecov-shield-url]: https://img.shields.io/codecov/c/github/mgthomas99/random2.svg
+[codecov-shield-url]: https://img.shields.io/codecov/c/github/mgthomas99/random2.svg?style=flat-square
 [license-url]: https://github.com/mgthomas99/random2/blob/master/LICENSE
-[license-shield-url]: https://img.shields.io/github/license/mgthomas99/random2.svg
+[license-shield-url]: https://img.shields.io/github/license/mgthomas99/random2.svg?style=flat-square
 [npm-url]: https://www.npmjs.com/package/random2
-[npm-shield-url]: https://img.shields.io/npm/v/random2.svg
+[npm-shield-url]: https://img.shields.io/npm/v/random2.svg?style=flat-square
 
 # random2
 [![npm][npm-shield-url]][npm-url]

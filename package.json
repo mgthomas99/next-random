@@ -2,36 +2,57 @@
   "name": "random2",
   "version": "1.0.0",
   "description": "A seedable pseudorandom number generator object.",
+  "author": "George Thomas",
+  "homepage": "https://github.com/mgthomas99/random2/blob/master/README.md",
+  "license": "MIT",
   "main": "dist/commonjs/index.js",
   "typings": "dist/commonjs/index.d.ts",
-  "author": "George Thomas",
-  "license": "MIT",
+  "keywords": [
+    "random",
+    "seed"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mgthomas99/random2.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mgthomas99/random2/issues"
+  },
   "scripts": {
     "build:commonjs": "tsc --module commonjs --outDir \"./dist/commonjs/\"",
     "build:es2015": "tsc --module es2015 --outDir \"./dist/es2015/\"",
     "build": "concurrent \"npm run build:commonjs\" \"npm run build:es2015\"",
-    "test": "nyc node_modules/mocha/bin/_mocha --require source-map-support/register --compilers ts:ts-node/register test/*.ts"
+    "test": "nyc node_modules/mocha/bin/_mocha test/**/*.ts",
+    "posttest": "nyc report && codecov -f coverage/*.json -t 25d4bd9c-65f6-401f-89dd-442bff8c78b7"
   },
   "devDependencies": {
     "@types/chai": "^4.0.1",
     "@types/mocha": "^2.2.41",
     "@types/node": "^8.0.2",
     "chai": "^4.0.2",
+    "codecov": "^2.2.0",
     "concurrent": "^0.3.2",
     "mocha": "^3.4.2",
     "nyc": "^11.0.2",
+    "source-map-support": "^0.4.15",
     "ts-node": "^3.1.0",
     "typescript": "^2.3.4"
   },
   "nyc": {
-    "include": [
-      "src/**/*.ts"
-    ],
     "extension": [
       ".ts"
     ],
+    "compilers": [
+      "ts:ts-node/register"
+    ],
     "require": [
+      "source-map-support/register",
       "ts-node/register"
+    ],
+    "reporter": [
+      "html",
+      "json",
+      "lcov"
     ]
   }
 }

@@ -12,12 +12,11 @@
 [![license][license-shield-url]][license-url]
 [![CircleCI][circleci-shield-url]][circleci-url]
 [![CodeCov][codecov-shield-url]][codecov-url]
+
 Seeded pseudorandom number generator object implementation for NodeJS.
 
 ## Usage
-Install the module via npm: `npm install random2`
-
-Install the module via yarn: `yarn random2`
+`npm install random2 --save`
 
 Use it in your JS like so:
 ```
@@ -32,10 +31,18 @@ var myRandom = new Random(42);
 myRandom.next();
 ```
 
+## Build
+The project's `package.json` has useful scripts for building the project:
+```
+npm install
+npm run build
+npm test
+```
+
 ### Typings
 Typescript defenitions are included with the package.
 ```
 import { Random } from "random2";
 let myRandom = new Random();
-myRandom.next(); // => Get a number.
+myRandom.next(); // => Get a number
 ```

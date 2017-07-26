@@ -11,7 +11,7 @@
 [![npm][npm-shield-url]][npm-url]
 [![license][license-shield-url]][license-url]
 [![CircleCI][circleci-shield-url]][circleci-url]
-[![Codecov][codecov-shield-url]][codecov-url]
+[![CodeCov][codecov-shield-url]][codecov-url]
 Seeded pseudorandom number generator object implementation for NodeJS.
 
 ## Usage
@@ -21,16 +21,21 @@ Install the module via yarn: `yarn random2`
 
 Use it in your JS like so:
 ```
-var random2 = require("random2");
+var Random = require("random2").Random;
 
-var myRandom = new random2();
+var myRandom = new Random();
 myRandom.next(); // Get a number
 ```
 Or create a seeded instance:
 ```
-var myRandom = new random2(5013);
+var myRandom = new Random(42);
 myRandom.next();
 ```
 
 ### Typings
 Typescript defenitions are included with the package.
+```
+import { Random } from "random2";
+let myRandom = new Random();
+myRandom.next(); // => Get a number.
+```

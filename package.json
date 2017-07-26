@@ -1,6 +1,6 @@
 {
   "name": "random2",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A seedable pseudorandom number generator object.",
   "author": "George Thomas",
   "homepage": "https://github.com/mgthomas99/random2/blob/master/README.md",

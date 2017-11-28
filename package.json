@@ -5,8 +5,8 @@
   "author": "George Thomas",
   "homepage": "https://github.com/mgthomas99/next-random/blob/master/README.md",
   "license": "MIT",
-  "main": "dist/commonjs/index.js",
-  "typings": "dist/commonjs/index.d.ts",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
   "keywords": [
     "random",
     "seed"
@@ -41,14 +41,7 @@
   },
   "nyc": {
     "extension": [
-      ".ts"
-    ],
-    "compilers": [
-      "ts:ts-node/register"
-    ],
-    "require": [
-      "source-map-support/register",
-      "ts-node/register"
+      ".js"
     ],
     "reporter": [
       "html",

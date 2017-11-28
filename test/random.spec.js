@@ -8,8 +8,8 @@ describe("Random", function () {
         const rand = new nextrandom.Random();
         const num = rand.next();
 
-        expect(num).to.be.gte(0);
-        expect(num).to.be.lt(1);
+        chai.expect(num).to.be.gte(0);
+        chai.expect(num).to.be.lt(1);
     });
 
     it("Should produce a pseudorandom number within the specified inclusive bounds",
@@ -18,8 +18,8 @@ describe("Random", function () {
         const bound = Math.random() * 100;
         const num = rand.next(bound);
 
-        expect(num).to.be.gte(0);
-        expect(num).to.be.lt(bound);
+        chai.expect(num).to.be.gte(0);
+        chai.expect(num).to.be.lt(bound);
     });
 
     it("Should produce the same sequence of numbers as a `Random` with the same seed",
@@ -28,8 +28,8 @@ describe("Random", function () {
         const rand2 = new nextrandom.Random(42);
 
         for (let i = 0; i < 100; i++) {
-            expect(rand1.next()).to.equal(rand2.next());
-            expect(rand1.next(10)).to.equal(rand2.next(10));
+            chai.expect(rand1.next()).to.equal(rand2.next());
+            chai.expect(rand1.next(10)).to.equal(rand2.next(10));
         }
     })
 });

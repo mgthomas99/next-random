@@ -1,12 +1,13 @@
 .nyc_output/
 coverage/
-node_modules/
 src/
 test/
 .editorconfig
 .gitignore
+.npmignore
 .npmrc
 circle.yml
 codecov.yml
 gulpfile.js
+README.md
 tsconfig.json

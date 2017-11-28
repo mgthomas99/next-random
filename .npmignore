@@ -4,4 +4,6 @@ node_modules/
 src/
 test/
 .editorconfig
+.gitignore
+circle.yml
 tsconfig.json

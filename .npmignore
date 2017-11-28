@@ -5,5 +5,8 @@ src/
 test/
 .editorconfig
 .gitignore
+.npmrc
 circle.yml
+codecov.yml
+gulpfile.js
 tsconfig.json

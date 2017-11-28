@@ -1,9 +1,9 @@
 {
-  "name": "random2",
-  "version": "1.0.1",
+  "name": "next-random",
+  "version": "1.0.0",
   "description": "A seedable pseudorandom number generator object.",
   "author": "George Thomas",
-  "homepage": "https://github.com/mgthomas99/random2/blob/master/README.md",
+  "homepage": "https://github.com/mgthomas99/next-random/blob/master/README.md",
   "license": "MIT",
   "main": "dist/commonjs/index.js",
   "typings": "dist/commonjs/index.d.ts",
@@ -13,10 +13,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mgthomas99/random2.git"
+    "url": "git+https://github.com/mgthomas99/next-random.git"
   },
   "bugs": {
-    "url": "https://github.com/mgthomas99/random2/issues"
+    "url": "https://github.com/mgthomas99/next-random/issues"
   },
   "scripts": {
     "build:commonjs": "tsc --module commonjs --outDir \"./dist/commonjs/\"",

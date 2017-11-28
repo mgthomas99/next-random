@@ -7,7 +7,7 @@
 [npm-url]: https://www.npmjs.com/package/random2
 [npm-shield-url]: https://img.shields.io/npm/v/random2.svg?style=flat-square
 
-# random2
+# next-random
 [![npm][npm-shield-url]][npm-url]
 [![license][license-shield-url]][license-url]
 [![CircleCI][circleci-shield-url]][circleci-url]

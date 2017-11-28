@@ -5,8 +5,8 @@
   "author": "George Thomas",
   "homepage": "https://github.com/mgthomas99/next-random/blob/master/README.md",
   "license": "MIT",
-  "main": "dist/commonjs/index.js",
-  "typings": "dist/commonjs/index.d.ts",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
   "keywords": [
     "random",
     "seed"
@@ -19,35 +19,27 @@
     "url": "https://github.com/mgthomas99/next-random/issues"
   },
   "scripts": {
-    "build:commonjs": "tsc --module commonjs --outDir \"./dist/commonjs/\"",
-    "build:es2015": "tsc --module es2015 --outDir \"./dist/es2015/\"",
-    "build": "concurrent \"npm run build:commonjs\" \"npm run build:es2015\"",
-    "test": "nyc node_modules/mocha/bin/_mocha test/**/*.ts",
-    "posttest": "nyc report && codecov -f coverage/*.json -t 25d4bd9c-65f6-401f-89dd-442bff8c78b7"
+    "build": "gulp build",
+    "test": "nyc node_modules/mocha/bin/_mocha test/**/*.spec.js",
+    "test-report": "nyc report",
+    "test-upload": "codecov -f coverage/*.json",
+    "prepublish": "npm-run-all -s \"build\" \"test\"",
+    "pretest": "npm-run-all -s \"build\"",
+    "posttest": "npm-run-all -s \"test-report\" \"test-upload\""
   },
   "devDependencies": {
-    "@types/chai": "^4.0.1",
-    "@types/mocha": "^2.2.41",
-    "@types/node": "^8.0.2",
     "chai": "^4.0.2",
     "codecov": "^2.2.0",
-    "concurrent": "^0.3.2",
+    "gulp": "^3.9.1",
+    "gulp-typescript": "^3.2.3",
     "mocha": "^3.4.2",
+    "npm-run-all": "^4.1.2",
     "nyc": "^11.0.2",
-    "source-map-support": "^0.4.15",
-    "ts-node": "^3.1.0",
     "typescript": "^2.3.4"
   },
   "nyc": {
     "extension": [
-      ".ts"
-    ],
-    "compilers": [
-      "ts:ts-node/register"
-    ],
-    "require": [
-      "source-map-support/register",
-      "ts-node/register"
+      ".js"
     ],
     "reporter": [
       "html",

@@ -1,48 +1,55 @@
-[circleci-url]: https://circleci.com/gh/mgthomas99/random2
-[circleci-shield-url]: https://img.shields.io/circleci/project/github/mgthomas99/random2.svg?style=flat-square
-[codecov-url]: https://codecov.io/gh/mgthomas99/random2
-[codecov-shield-url]: https://img.shields.io/codecov/c/github/mgthomas99/random2.svg?style=flat-square
-[license-url]: https://github.com/mgthomas99/random2/blob/master/LICENSE
-[license-shield-url]: https://img.shields.io/github/license/mgthomas99/random2.svg?style=flat-square
-[npm-url]: https://www.npmjs.com/package/random2
-[npm-shield-url]: https://img.shields.io/npm/v/random2.svg?style=flat-square
+[circleci-url]: https://circleci.com/gh/mgthomas99/next-random
+[circleci-shield-url]: https://img.shields.io/circleci/project/github/mgthomas99/next-random.svg?style=flat-square
+[codecov-url]: https://codecov.io/gh/mgthomas99/next-random
+[codecov-shield-url]: https://img.shields.io/codecov/c/github/mgthomas99/next-random.svg?style=flat-square
+[license-url]: https://github.com/mgthomas99/next-random/blob/master/LICENSE
+[license-shield-url]: https://img.shields.io/github/license/mgthomas99/next-random.svg?style=flat-square
+[npm-url]: https://www.npmjs.com/package/next-random
+[npm-shield-url]: https://img.shields.io/npm/v/next-random.svg?style=flat-square
 
 # next-random
-[![npm][npm-shield-url]][npm-url]
+
+[![NPM][npm-shield-url]][npm-url]
 [![license][license-shield-url]][license-url]
 [![CircleCI][circleci-shield-url]][circleci-url]
 [![CodeCov][codecov-shield-url]][codecov-url]
 
-Seeded pseudorandom number generator object implementation for NodeJS.
+Seeded pseudorandom number generator object implementation for NodeJS, written
+in TypeScript with type definitions and 100% code coverage.
 
 ## Usage
+
 `npm install random2 --save`
 
 Use it in your JS like so:
-```
-var Random = require("random2").Random;
 
-var myRandom = new Random();
-myRandom.next(); // Get a number
+```js
+    var nextrandom = require("next-random");
+    var myRandom = new nextrandom.Random();
+    myRandom.next(); // 0.4939263087001966
 ```
+
 Or create a seeded instance:
-```
-var myRandom = new Random(42);
-myRandom.next();
+
+```js
+    var myRandom = new Random(42);
+    myRandom.next(); // 0.19240476780557803
 ```
 
-## Build
+### Build
+
 The project's `package.json` has useful scripts for building the project:
-```
-npm install
-npm run build
-npm test
+
+```sh
+    npm install
+    npm run build
+    npm test
 ```
 
 ### Typings
-Typescript defenitions are included with the package.
-```
-import { Random } from "random2";
-let myRandom = new Random();
-myRandom.next(); // => Get a number
-```
+
+Typescript definitions are included with the package.
+
+## License
+
+See the `LICENSE` file for license information.

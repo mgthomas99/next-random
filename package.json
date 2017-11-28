@@ -20,7 +20,7 @@
   },
   "scripts": {
     "build": "gulp build",
-    "test": "nyc node_modules/mocha/bin/_mocha test/**/*.ts",
+    "test": "nyc node_modules/mocha/bin/_mocha test/**/*.spec.js",
     "test-report": "nyc report",
     "test-upload": "codecov -f coverage/*.json -t 25d4bd9c-65f6-401f-89dd-442bff8c78b7",
     "pretest": "npm-run-all -s \"build\"",

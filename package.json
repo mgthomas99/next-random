@@ -19,9 +19,7 @@
     "url": "https://github.com/mgthomas99/next-random/issues"
   },
   "scripts": {
-    "build:commonjs": "tsc --module commonjs --outDir \"./dist/commonjs/\"",
-    "build:es2015": "tsc --module es2015 --outDir \"./dist/es2015/\"",
-    "build": "concurrent \"npm run build:commonjs\" \"npm run build:es2015\"",
+    "build": "gulp build",
     "test": "nyc node_modules/mocha/bin/_mocha test/**/*.ts",
     "posttest": "nyc report && codecov -f coverage/*.json -t 25d4bd9c-65f6-401f-89dd-442bff8c78b7"
   },
@@ -35,6 +33,7 @@
     "gulp": "^3.9.1",
     "gulp-typescript": "^3.2.3",
     "mocha": "^3.4.2",
+    "npm-run-all": "^4.1.2",
     "nyc": "^11.0.2",
     "source-map-support": "^0.4.15",
     "ts-node": "^3.1.0",

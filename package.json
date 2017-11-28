@@ -23,6 +23,7 @@
     "test": "nyc node_modules/mocha/bin/_mocha test/**/*.spec.js",
     "test-report": "nyc report",
     "test-upload": "codecov -f coverage/*.json",
+    "prepublish": "npm-run-all -s \"build\" \"test\"",
     "pretest": "npm-run-all -s \"build\"",
     "posttest": "npm-run-all -s \"test-report\" \"test-upload\""
   },

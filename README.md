@@ -33,7 +33,7 @@ Or create a seeded instance:
 
 ```js
     var myRandom = new Random(42);
-    myRandom.next(); // 0.19240476780557803
+    myRandom.next(); // 0.9165215479156338
 ```
 
 ### Build
